@@ -1,0 +1,11 @@
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./build:/usr/share/nginx/html
+      - ./conf.d:/etc/nginx/conf.d
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
